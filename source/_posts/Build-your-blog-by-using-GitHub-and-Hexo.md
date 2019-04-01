@@ -31,21 +31,21 @@ If you have many projects and some of them are using different Node versions. I 
  
 ## 2. Install Hexo
 
-Install Hexo Git 
 
-`npm install hexo-deployer-git --save` 
 
-Install Hexo 
- 
-`npm install hexo-cli -g` 
- 
-Install Hexo deployer git 
- 
-`npm install hexo-deployer-git --save` 
- 
-Check Hexo version 
- 
-`hexo version` 
+```
+# Install Hexo Git
+$ npm install hexo-deployer-git --save
+
+# Install Hexo
+$ npm install hexo-cli -g
+
+# Install Hexo deployer git
+$ npm install hexo-deployer-git --save
+
+# Check Hexo version
+hexo version
+```
 
 ## 3. Create a new GitHub repository
 
@@ -54,21 +54,19 @@ Repository name : yourname.github.io (change yourname to your GitHub Id)
 
 ## 4. Initial your Hexo project
 
-Initial blog 
+```
+# Initial blog 
+$ hexo init blog
 
-`hexo init blog`
+# Change directory 
+$ cd blog
 
-Change directory 
+# Install node module 
+$ npm install
 
-`cd blog`
-
-Install node module 
-
-`npm install`
-
-Host on your local 
-
-`hexo serve`
+# Host on your local 
+$ hexo serve
+```
 
 You will see your Hexo project is running at [http://localhost:4000](http://localhost:4000)
 
@@ -77,6 +75,7 @@ You will see your Hexo project is running at [http://localhost:4000](http://loca
 Go to the _config.yml and find the deploy area. 
 (change yourname to your GitHub Id)
 
+Blog/_config.yml
 ```
 deploy:
   type: git
@@ -85,9 +84,10 @@ deploy:
   yourname: yourname
 ```
 
-Deploy 
-
-`hexo deploy -generate`
+```
+# Deploy to GitHub
+$ hexo deploy -generate
+```
 
 Then you can see your blog on the GitHub.
 
